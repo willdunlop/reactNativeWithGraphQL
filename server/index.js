@@ -26,7 +26,7 @@ addMockFunctionsToSchema({
 
 app.use('/graphql', bodyParser.json(), graphqlExpress({
     schema: executableSchema,
-    conteaxt: {},
+    context: {},
 }));
 
 app.use('/graphiql', graphiqlExpress({
@@ -37,5 +37,5 @@ const graphQLServer = createServer(app);
 
 
 
-app.listen(PORT, () => console.log(`Server is now running on localhost port ${GRAPHQL_PORT}`))
+app.listen(GRAPHQL_PORT, () => console.log(`Server is now running on localhost port ${GRAPHQL_PORT}`))
 
